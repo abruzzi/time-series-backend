@@ -28,6 +28,6 @@ wss.on('connection', function connection(ws) {
   generator.stdout.on('data', output);
 
   ws.on('close', function close() {
-    generator.removeEventListener(output);
+    generator.stdout.removeListener('data', output);
   });
 });
