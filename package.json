@@ -9,6 +9,7 @@
     "moment": "^2.21.0",
     "nginx-log-parser": "0.0.4",
     "nginxparser": "^2.1.0",
+    "statsd-client": "^0.4.2",
     "ws": "^5.2.0"
   },
   "devDependencies": {},

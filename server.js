@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const { spawn } = require('child_process');
-const generator = spawn('./generator.sh');
+const generator = spawn('./generator-fake.sh');
 
 const WebSocket = require('ws');
 
