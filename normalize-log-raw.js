@@ -18,8 +18,10 @@ parser.read('-', function (row) {
 	try {
 		const x = url.parse(row.http_referer, true);
 		console.log(`${ts} ${row.status} ${row.request_time} ${campaign} ${x.query.mac} ${x.query.apmac} ${x.query.sessionID}`);
-		sdc.increment(`airport.status.${row.status}`);
-		sdc.increment(`airport.campaigns.${campaign}`);
+		
+		sdc.increment(`jc.airport.status.${row.status}`);
+		sdc.increment(`jc.airport.campaigns.${campaign}`);
+		sdc.timing(`jc.airport.campaigns.${campaign}`, row.request_time * 1000);
 	} catch (e) {
 		// simply ignore it
 		sdc.close();
