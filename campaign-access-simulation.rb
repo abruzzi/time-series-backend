@@ -35,6 +35,6 @@ def generate_message
 end
 
 while true do
-	sleep(Random.rand(0.5))
+	sleep(Random.rand(0.08))
 	puts generate_message
 end
